@@ -1,2 +1,2 @@
-# T-SQL-Scripts
-Portfolio: This repository showcases a collection of SQL scripts designed to streamline database management, automate tasks, and address common database challenges efficiently.
+# T-SQL Scripts Portfolio
+This repository showcases a curated collection of SQL scripts aimed at enhancing database management, automating routine tasks, and solving real-world database challenges. From query optimization and data transformation to performance tuning, these scripts demonstrate best practices and efficient solutions.
