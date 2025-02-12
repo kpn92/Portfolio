@@ -1,0 +1,50 @@
+# Ignore local configuration files
+*.ini
+*.cfg
+*.config
+
+# Ignore sensitive data (e.g., credentials)
+*.env
+*.secret
+*.key
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+
+# Ignore temporary files
+*.tmp
+*.log
+*.bak
+*.temp
+
+# Ignore compiled files or binaries
+*.exe
+*.dll
+*.so
+*.class
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore backup files
+*.backup
+*.old
+
+# Ignore local database files (if applicable)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore output or generated files
+output/
+results/
