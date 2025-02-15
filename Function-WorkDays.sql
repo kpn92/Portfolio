@@ -21,20 +21,20 @@ BEGIN
 		INSERT INTO @Holidays (HolidayDate,HolidayName)
 		VALUES 
 		-- Fixed holidays
-		(DATEFROMPARTS(@Year, 1, 1),N'Πρωτοχρονιά'),		-- Πρωτοχρονιά (New Year's Day): January 1
-		(DATEFROMPARTS(@Year, 1, 6),N'Θεοφάνεια'),			-- Θεοφάνεια (Epiphany): January 6
-		(DATEFROMPARTS(@Year, 3, 25),N'25η Μαρτίου'),		-- Ευαγγελισμός της Θεοτόκου (Annunciation of the Virgin Mary): March 25
-		(DATEFROMPARTS(@Year, 5, 1),N'Πρωτομαγιά'),			-- Εργατική Πρωτομαγιά (Labour Day): May 1
-		(DATEFROMPARTS(@Year, 8, 15),N'Κοίμηση Θεοτόκου'),	-- Κοίμηση της Θεοτόκου (Dormition of the Virgin Mary): August 15
-		(DATEFROMPARTS(@Year, 10, 28),N'28η Οκτωβρίου'),	-- 28η Οκτωβρίου (Ochi Day): October 28
-		(DATEFROMPARTS(@Year, 12, 25),N'Χριστούγεννα'),		-- Χριστούγεννα (Christmas Day): December 25
-		(DATEFROMPARTS(@Year, 12, 26),N'Σύναξη Θεοτόκου'),	-- Σύναξη της Θεοτόκου (Synaxis of the Virgin Mary): December 26
+		(DATEFROMPARTS(@Year, 1, 1),N'Πρωτοχρονιά'),		-- (New Year's Day): January 1
+		(DATEFROMPARTS(@Year, 1, 6),N'Θεοφάνεια'),		-- (Epiphany): January 6
+		(DATEFROMPARTS(@Year, 3, 25),N'25η Μαρτίου'),		-- (Annunciation of the Virgin Mary): March 25
+		(DATEFROMPARTS(@Year, 5, 1),N'Πρωτομαγιά'),		-- (Labour Day): May 1
+		(DATEFROMPARTS(@Year, 8, 15),N'Κοίμηση Θεοτόκου'),	-- (Dormition of the Virgin Mary): August 15
+		(DATEFROMPARTS(@Year, 10, 28),N'28η Οκτωβρίου'),	-- (Ochi Day): October 28
+		(DATEFROMPARTS(@Year, 12, 25),N'Χριστούγεννα'),		-- (Christmas Day): December 25
+		(DATEFROMPARTS(@Year, 12, 26),N'Σύναξη Θεοτόκου'),	-- (Synaxis of the Virgin Mary): December 26
 		-- Movable holidays
-		(DATEADD(DAY, -48, @Easter),N'Καθαρά Δευτέρα'),		-- Καθαρά Δευτέρα (Clean Monday): The first day of Lent, 48 days before Easter.
-		(DATEADD(DAY, -2, @Easter),N'Μεγάλη Παρασκευή'),	-- Μεγάλη Παρασκευή (Good Friday): The Friday before Easter.
-		(@Easter,N'Κυριακή του Πάσχα'),						-- Κυριακή του Πάσχα (Easter Sunday): Orthodox Easter, calculated based on the lunar calendar.
-		(DATEADD(DAY, 1, @Easter),N'Δευτέρα του Πάσχα'),	-- Δευτέρα του Πάσχα (Easter Monday): The day after Easter Sunday.
-		(DATEADD(DAY, 50, @Easter),N'Αγίου Πνεύματος');		-- Αγίου Πνεύματος (Holy Spirit Monday): 50 days after Easter (Pentecost Monday).
+		(DATEADD(DAY, -48, @Easter),N'Καθαρά Δευτέρα'),		-- (Clean Monday): The first day of Lent, 48 days before Easter.
+		(DATEADD(DAY, -2, @Easter),N'Μεγάλη Παρασκευή'),	-- (Good Friday): The Friday before Easter.
+		(@Easter,N'Κυριακή του Πάσχα'),				-- (Easter Sunday): Orthodox Easter, calculated based on the lunar calendar.
+		(DATEADD(DAY, 1, @Easter),N'Δευτέρα του Πάσχα'),	-- (Easter Monday): The day after Easter Sunday.
+		(DATEADD(DAY, 50, @Easter),N'Αγίου Πνεύματος');		-- (Holy Spirit Monday): 50 days after Easter (Pentecost Monday).
 
 
         SET @Year += 1;
