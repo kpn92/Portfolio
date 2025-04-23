@@ -15,6 +15,6 @@ Each function is written in **T-SQL** and is compatible with SQL Server 2016 and
 
 
 ### 2. Function-WorkDays.sql
-Purpose: Returns the number of working days (Mon–Fri) between two dates.
-Location: `SQL-Functions/Function-WorkDays.sql`
-Example: `SELECT dbo.WorkDays('2025-04-01', '2025-04-10');`  -- Returns 8
+- Purpose: Returns the number of working days (Mon–Fri) between two dates.
+- Location: `SQL-Functions/Function-WorkDays.sql`
+- Example: `SELECT dbo.WorkDays('2025-04-01', '2025-04-10');`  -- Returns 8
