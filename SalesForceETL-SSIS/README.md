@@ -66,6 +66,12 @@ Each package performs the following:
 
 ---
 
+## Package Control Flow Overview
+
+This image illustrates the overall control flow of the SSIS package:
+
+![Control Flow](./Images/ssis-overview.png)
+
 ## Developer
 
 This SSIS project was designed, developed and deployed by:
