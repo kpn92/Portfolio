@@ -12,4 +12,4 @@
 
 - 3D regression modeling
 
-Working with the employee_attrition.csv dataset
+Working with the 10-employees.csv dataset
