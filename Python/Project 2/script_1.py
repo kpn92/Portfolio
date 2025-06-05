@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the sample dataset
 sample_file_path = '10-employees.csv'
-sample_df = pd.read_csv(r'C:\WorkEarlyDataAnalysis\Employee Data Analysis\10-employees.csv')
+sample_df = pd.read_csv('10-employees.csv')
 
 # Group by department and calculate the average salary and employee satisfaction
 dept_analysis = sample_df.groupby('Department').agg({
