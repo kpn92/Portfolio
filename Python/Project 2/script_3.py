@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Load the sample dataset
 sample_file_path = '10-employees.csv'
-sample_df = pd.read_csv(r'C:\WorkEarlyDataAnalysis\Employee Data Analysis\10-employees.csv')
+sample_df = pd.read_csv(r'C:\10-employees.csv')
 
 # Analyzing the distribution of employees across different departments
 dept_distribution = sample_df['Department'].value_counts()
