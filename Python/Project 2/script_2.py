@@ -4,7 +4,7 @@ import seaborn as sns
 
 # Load the sample dataset
 sample_file_path = '10-employees.csv'
-sample_df = pd.read_csv(r'C:\WorkEarlyDataAnalysis\Employee Data Analysis\10-employees.csv')
+sample_df = pd.read_csv('10-employees.csv')
 
 # Group by performance score and calculate the average number of absences
 perf_analysis = sample_df.groupby('PerformanceScore').agg({
