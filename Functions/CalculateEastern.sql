@@ -1,35 +1,34 @@
-CREATE FUNCTION [dbo].[CalcEastern](@pYear INT)
-RETURNS DATETIME
+CREATE FUNCTION dbo.CalcEastern (@year INT)
+RETURNS DATE
 AS
 BEGIN
-    DECLARE @D INT
-    DECLARE @E INT
+    DECLARE @EasterOffset INT;
+    DECLARE @easterIndex INT;
+    DECLARE @month INT;
+    DECLARE @day INT;
 
-    -- Calculate the date of Easter using the algorithm
-    SET @D = (19 * (@pYear % 19) + 16) % 30
-    SET @E = @D + (2 * (@pYear % 4) + 4 * (@pYear % 7) + 6 * @D) % 7 + 3
+    -- Calculate the full moon offset
+    SET @EasterOffset = (19 * (@year % 19) + 16) % 30;
 
-    DECLARE @RetYear INT
-    SET @RetYear = @pYear
+    -- Calculate the index for Easter Sunday based on the year and offset
+    SET @easterIndex = @EasterOffset 
+                     + (2 * (@year % 4) 
+                     + 4 * (@year % 7) 
+                     + 6 * @EasterOffset) % 7 + 3;
 
-    DECLARE @RetMonth INT
-    DECLARE @RetDay INT
-
-    -- Determine the month and day based on the calculated value of @E
-    IF @E > 30
+    -- Determine the actual calendar month and day
+    IF @easterIndex > 30
     BEGIN
-        -- If @E is greater than 30, Easter is in May
-        SET @RetMonth = 5
-        SET @RetDay = @E % 30
+        SET @month = 5;
+        SET @day = @easterIndex - 30;
     END
     ELSE
     BEGIN
-        -- Otherwise, Easter is in April
-        SET @RetMonth = 4
-        SET @RetDay = @E
+        SET @month = 4;
+        SET @day = @easterIndex;
     END
 
-    -- Return the calculated date as a DATETIME object
-    RETURN DATEFROMPARTS(@RetYear, @RetMonth, @RetDay)
+    -- Return the final calculated Easter date
+    RETURN DATEFROMPARTS(@year, @month, @day);
 END
 GO
